@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- For those viewing the source code or worried about copy right issues. I got the code from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive -->
+<html>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Insert Name Here Portfolio</h1>
+  <p>Welcome. Please enjoy my projects since it my biggest passion.</p>
+  <p>You can read more about me at LinkedIn or download licensed files at GitHub.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="https://cdn.pixabay.com/photo/2015/05/25/22/38/forget-me-not-784028_1280.jpg" style="width:100%">
+    <img src="https://cdn.pixabay.com/photo/2013/07/25/16/21/dandelion-167112_1280.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Dandelion_sun.jpg/932px-Dandelion_sun.jpg" style="width:100%">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Amiens_France_Field-of-tulips-01.jpg/1600px-Amiens_France_Field-of-tulips-01.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="https://www.publicdomainpictures.net/pictures/20000/velka/tulips-border-871297440114OoY.jpg" style="width:100%">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Forget_me_not.jpg/1599px-Forget_me_not.jpg" style="width:100%">
+
+  </div>
+  <div class="column">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Forget_me_not_flowers_macro.jpg/1599px-Forget_me_not_flowers_macro.jpg" style="width:100%">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Indian_Paintbrush_in_Grand_Teton_NP-NPS.jpg" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>
+<!---- Simpler Verison: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_portfolio_gallery ------->
